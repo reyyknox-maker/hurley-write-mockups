@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { ArrowRight, Star, Clock, FileText, CheckCircle, Play, Menu, X } from 'lucide-react';
+import { ArrowRight, Star, Clock, FileText, CheckCircle, Play, Menu, X, ClipboardList, Search, Map, ThumbsUp } from 'lucide-react';
 import heroImage from './assets/hero_person.png';
 
 const useScrollReveal = () => {
@@ -102,13 +102,14 @@ function App() {
           </div>
           <div className="roadmap-grid">
             {[ 
-              { step: 1, title: 'Survey', desc: 'Interview writers and reviewers to understand challenges.', class: 'step-1' },
-              { step: 2, title: 'Evaluate', desc: 'Analyze documents, tools, and processes in place.', class: 'step-2' },
-              { step: 3, title: 'Prepare Roadmap', desc: 'Create detailed findings + recommendations for solutions.', class: 'step-3' },
-              { step: 4, title: 'Review & Implement', desc: 'Present roadmap and discuss path forward with stakeholders.', class: 'step-4' }
+              { step: 1, title: 'Survey', desc: 'Interview writers and reviewers to understand challenges.', class: 'step-1', icon: <ClipboardList size={32} color="var(--primary-orange)" strokeWidth={1.5} /> },
+              { step: 2, title: 'Evaluate', desc: 'Analyze documents, tools, and processes in place.', class: 'step-2', icon: <Search size={32} color="var(--primary-orange)" strokeWidth={1.5} /> },
+              { step: 3, title: 'Prepare Roadmap', desc: 'Create detailed findings + recommendations for solutions.', class: 'step-3', icon: <Map size={32} color="var(--primary-orange)" strokeWidth={1.5} /> },
+              { step: 4, title: 'Review & Implement', desc: 'Present roadmap and discuss path forward with stakeholders.', class: 'step-4', icon: <ThumbsUp size={32} color="var(--primary-orange)" strokeWidth={1.5} /> }
             ].map(item => (
               <RevealSection key={item.step} className={`roadmap-card ${item.class}`}>
                 <div className="card-num">{item.step}</div>
+                <div style={{marginBottom: '1rem', marginTop: '0.25rem'}}>{item.icon}</div>
                 <h3>{item.title}</h3>
                 <p>{item.desc}</p>
               </RevealSection>
