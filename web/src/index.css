@@ -195,8 +195,26 @@ button:focus-visible, .btn:focus-visible {
 }
 
 .navbar .container { display: flex; justify-content: space-between; align-items: center; }
-.logo { font-family: var(--font-heading); font-weight: 800; color: var(--white); font-size: 1.5rem; display: flex; align-items: center; }
-.logo span { color: var(--primary-orange); }
+
+/* Real logo image — inverted white for dark backgrounds */
+.logo-img-link { display: flex; align-items: center; flex-shrink: 0; }
+.navbar-logo {
+  height: 36px;
+  width: auto;
+  display: block;
+  filter: brightness(0) invert(1);
+  transition: opacity 0.2s ease;
+}
+.navbar-logo:hover { opacity: 0.85; }
+
+.footer-logo {
+  height: 32px;
+  width: auto;
+  display: block;
+  filter: brightness(0) invert(1);
+  margin-bottom: 1.25rem;
+  opacity: 0.9;
+}
 
 .nav-wrapper { display: flex; align-items: center; gap: 2rem; }
 .nav-links { display: flex; gap: 2rem; align-items: center; }

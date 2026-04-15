@@ -85,7 +85,9 @@ function App() {
     <>
       <nav className="navbar">
         <div className="container">
-          <div className="logo">Hurley<span>Write</span></div>
+          <a href="#" className="logo-img-link">
+            <img src="/hurleywrite-logo.webp" alt="Hurley Write" className="navbar-logo" />
+          </a>
           <div className="nav-wrapper">
             <div className={`nav-links ${isMobileMenuOpen ? 'mobile-open' : ''}`}>
               <a href="#" onClick={() => setIsMobileMenuOpen(false)}>Solutions</a>
@@ -301,7 +303,7 @@ function App() {
         <div className="container">
           <div className="footer-grid">
             <div className="footer-brand">
-              <div className="logo" style={{marginBottom: '1rem'}}>Hurley<span>Write</span></div>
+              <img src="/hurleywrite-logo.webp" alt="Hurley Write" className="footer-logo" />
               <p className="footer-col-desc">Positioning technical teams for success through diagnostic consulting and better communication systems.</p>
             </div>
             <div>
